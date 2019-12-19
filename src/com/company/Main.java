@@ -9,11 +9,16 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String myComand = "";
-        myComand = scan.nextLine();
+        String userComand = "";
+        userComand = scan.nextLine();
+        char[] myComand = new char[3];
+        for (int i = 0; i < 3; i++) {
+            myComand[i] = userComand.charAt(i);
+        }
+
 
         Converter converter = new Converter();
-        Command command = converter.convertInputToCommant(myComand);
+        Command command = converter.convertInputToCommand(userComand);
 
         command.getDrink();
     }

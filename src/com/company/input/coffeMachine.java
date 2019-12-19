@@ -11,21 +11,13 @@ public class coffeMachine {
 
     public Drink makeDrink(Command command) {
         if (command.getDrink().equals("TEA")) {
-            System.out.println("Input sughar");
-
-            Scanner scanner = new Scanner(System.in);
-            int sugharinput = scanner.nextInt();
-
+            command.getSugar();
             Tea tea = new Tea();
-            tea.setSugar(sugharinput);
             return tea;
         } else {
-            System.out.println("Input sughar");
 
             Coffe coffe = new Coffe();
-            Scanner scanner = new Scanner(System.in);
-            int sugharinput = scanner.nextInt();
-            coffe.setSugar(sugharinput);
+            command.getSugar();
             return coffe;
         }
     }
