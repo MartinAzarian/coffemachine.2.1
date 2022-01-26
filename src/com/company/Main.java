@@ -8,9 +8,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        String userComand = "";
-        userComand = scan.nextLine();
+        Scanner sc = new Scanner(System.in);
+        String userComand = sc.nextLine;
+        if(userComand.length > 3) {
+          return 1;
+        }
         char[] myComand = new char[3];
         for (int i = 0; i < 3; i++) {
             myComand[i] = userComand.charAt(i);
